@@ -1,8 +1,4 @@
-/*
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
 
 (function($) {
 
@@ -13,7 +9,7 @@
 		$main = $('#main'),
 		settings = {
 
-			// Parallax background effect?
+			// Parallax background effect
 				parallax: true,
 
 			// Parallax factor (lower = more intense, higher = less intense).
@@ -30,20 +26,20 @@
 			xsmall:  [ null,      '480px'  ],
 		});
 
-	// Play initial animations on page load.
+	// animations lors chargment
 		$window.on('load', function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
 		});
 
-	// Touch?
+	// mobile
 		if (browser.mobile) {
 
-			// Turn on touch mode.
+			// tactile
 				$body.addClass('is-touch');
 
-			// Height fix (mostly for iOS).
+			// hauteur
 				window.setTimeout(function() {
 					$window.scrollTop($window.scrollTop() + 1);
 				}, 0);
@@ -63,7 +59,7 @@
 
 		// Parallax background.
 
-			// Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
+			// meilleur scroll
 				if (browser.name == 'ie'
 				||	browser.mobile)
 					settings.parallax = false;
@@ -93,7 +89,7 @@
 
 			}
 
-	// Main Sections: Two.
+	// Main Sections: 
 
 		// Lightbox gallery.
 			$window.on('load', function() {
